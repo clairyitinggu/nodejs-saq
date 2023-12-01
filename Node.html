@@ -1,0 +1,1349 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: medium !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --main-color: rgba(128, 30, 255, 1);
+    --shadow-color : rgb(178, 80, 255);
+    --transplate-color : rgba(128, 30, 255, 0.1);
+    --dark-color : rgb(70, 18, 137);
+    --light-color : rgb(248, 242, 255);
+    --font-color : rgb(12, 12, 12);
+    --base-font : "Glow Sans", "Microsoft YaHei", serif;
+    --title-font: "Roboto Slab", "Times", serif;
+    --blockquote-font : "Times", "Roboto Slab", serif;
+    --blockquote-color : rgba(117, 117, 117, 0.9);
+    --monospace: "Cascadia code", "Courier New", monospace; 
+
+    /* --background : url("https://cdn.jsdelivr.net/gh/LSTM-Kirigaya/KImage/Img/2k.jpg"); */
+
+    --quote-title-font-size : 0.9em;
+    --quote-tag-font-size : 1.1em;
+
+    /* typora GUI config */
+    --sidebar-font-color : black;
+    --main-panel-font-color : black;
+}
+
+/* global setting */
+body {
+    font-family: "Roboto Slab", "SimHei", serif;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: initial;
+}
+
+
+/* write is a wrapper of writable region */
+#write {
+    position: static;
+    /* width: 90%; */
+    max-width: 1000px;
+    min-height: calc(100vh - 6rem);
+	min-width: calc(100vw - 45rem);
+    line-height: 1.6;
+    transform: none;
+    height: auto;
+    caret-color: var(--main-color);
+}
+
+#write h1, h2, h3, h4, h5, h6 {
+    color: var(--font-color);
+    font-family: var(--title-font);
+    font-weight: 800;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+
+#write h1 {
+    font-size: 40px;
+    margin: 0 0 1.0em 0;
+    line-height: 1.3; 
+    border-bottom: solid 3px var(--main-color);
+    width: fit-content;
+}
+
+#write h2 {
+    font-size: 28px;
+    border-radius: .5em;
+    width: fit-content;
+}
+
+#write h2::before {
+    content: "H2";
+    border-radius: .3em;
+    font-size: .8em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+#write h3 {
+    font-size: 24px;
+    border-radius: .3em; 
+    width: fit-content;
+}
+
+#write h3::before {
+    content: "H3";
+    color : white;
+    font-size: 0.8em;
+    background-color: var(--main-color);
+    border-radius: .3em;
+    margin-right: 12px;
+    padding: 4px 7px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write h4 {
+    font-size: 20px;
+}
+
+#write h5 {
+    font-size: 16px;
+}
+
+#write hr {
+    width: 60%;
+    text-align:center;
+    border-bottom: solid 1.8px var(--main-color);
+    margin: 4.5em auto;
+}
+
+
+#write img {
+    border-radius: 1.5em !important;
+    box-shadow: 0 0 10px 3px rgba(134, 136, 137, 0.8);
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+/* #write img:hover {
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+} */
+
+
+#write blockquote {
+    padding: 10px 10px;
+    font-size: var(--quote-title-font-size);
+    color: var(--blockquote-color);
+    border-left: 6px solid var(--main-color);
+    background: var(--light-color);
+    border-radius : 0.5em;
+    font-family: var(--blockquote-font);
+    line-height: 35px;
+}
+
+#write blockquote span {
+    word-break: break-all;
+}
+
+#write blockquote h1 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    border-bottom: none;
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h1::before {
+    content: "Tips";
+    background-color: var(--main-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+}
+
+#write blockquote h2 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h2::before {
+    content: "Warning";
+    background-color: rgb(207, 210, 16);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+}
+
+#write blockquote h3 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h3::before {
+    content: "Error";
+    background-color: rgb(224, 66, 66);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write blockquote h4 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h4::before {
+    content: "Remind";
+    background-color: var(--shadow-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+#write blockquote h5 {
+    font-weight: 200;
+    font-size: var(--quote-tag-font-size);
+    font-family: var(--base-font);
+    line-height: 35px;
+}
+
+#write blockquote h5::before {
+    content: "Remind";
+    background-color: var(--shadow-color);
+    font-family: var(--title-font);
+    color: white;
+    font-size: var(--quote-tag-font-size);
+    border-radius: .3em;
+    padding: 3px 7px;
+    margin-right: 15px;
+    float: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    vertical-align: baseline;
+    border-width: 0;
+}
+
+
+/* code block */
+#write pre.md-fences {
+	padding: 1rem 0.5rem 1rem;
+	display: block;
+	-webkit-overflow-scrolling: touch;
+	/* box-shadow: 0 0 6px 2px rgba(151, 151, 151, 0.9); */
+    /* border-top: rgb(51, 51, 51) solid 35px; */
+    border-top: rgb(244, 244, 244) solid 35px;
+    background-color: rgb(244, 244, 244);
+}
+
+
+pre.md-fences::before {
+	content: ' ';
+	background: var(--main-color);
+	box-shadow: 23px 0 rgb(128, 128, 128), 45px 0 gray;
+	border-radius: 50%;
+	margin-top: -2.3rem;
+	position: absolute;
+	left: 15px;
+	height: 12px;
+	width: 12px;
+}
+
+#write pre.md-fences {
+	line-height: 1.5rem;
+	font-size: .9rem;
+	font-weight: 300;
+	border-radius: .7em;
+    font-family: var(--monospace) !important;
+}
+
+/* inline code */
+code {
+    margin: 0 2px;
+    padding: 4px 6px;
+    color: #666363;
+    white-space: pre-wrap;
+    background: var(--light-color);
+    border-radius: 8px;
+}
+
+#write blockquote code {
+    margin: 0 2px;
+    padding: 4px 6px;
+    color: white;
+    white-space: pre-wrap;
+    background: var(--main-color);
+    border-radius: 8px;
+}
+
+kbd,
+samp,
+tt,
+var {
+	font-family: var(--monospace) !important;
+}
+
+
+/* YAML */
+pre.md-meta-block {
+    font-size: .8rem;
+    min-height: .8rem;
+    white-space: pre-wrap;
+    background: var(--main-color);
+    display: block;
+    overflow-x: hidden;
+    padding: 15px;
+    font-family: var(--monospace);
+    border-radius: 1.2em;
+    color: white;
+    caret-color: white;
+}
+
+
+/* Math */
+#math-inline-preview-content .MathJax {
+    color: white !important;
+}
+
+/* table */
+#write table
+{
+    width: 95%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: var(--monospace);
+    margin: 20px;
+}
+#write table td, table th
+{
+    border: 1px solid transparent;
+    color: rgb(18, 18, 18);
+    height: 30px;
+    padding: 10px;
+    border-radius: .5em;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+#write table td {
+    font-family: var(--title-font);
+}
+#write table thead th
+{
+    background-color: var(--shadow-color);
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+table tr:nth-child(odd)
+{
+    background: white;
+}
+table tr:nth-child(even)
+{
+    background: var(--light-color);
+}
+table td:hover {
+  background-color: var(--shadow-color) !important;
+  color: white !important;
+  box-shadow: 0 0 10px 5px var(--shadow-color);
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+
+
+/* main element consisting of your text */
+p {
+    color: var(--font-color);
+    margin: 0 0 2em 0;  
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: var(--base-font);
+}
+
+a {
+    color: var(--main-color);
+    font-weight: 500;
+    text-decoration: none;
+    text-decoration-style: none;
+    cursor: pointer;
+    padding: 0 3px 0 3px;
+}
+
+
+/* list */
+
+ol,
+ul {
+  padding-left: 2em;
+  line-height: 2;
+}
+
+ul>li>ul>li {
+    list-style-type: circle;
+  }
+  
+ul>li>ul>li>ul>li {
+    list-style-type: square;
+}
+
+
+iframe {
+    border-radius: 1.2em;
+    box-shadow: 0 0 8px 3px rgba(181, 181, 182, 0.9);
+}
+
+
+/* checkbox */
+.md-task-list-item:hover > input:before,
+input[type='checkbox']:hover:before {
+	opacity: 1;
+	transition: 0.3s;
+	background-color: var(--shadow-color);
+}
+
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+	border-radius: .3em;
+    vertical-align: middle;
+    border: 1.2px solid var(--main-color);
+    background-color: #ffffff;
+	width: 1.1rem;
+    height: 1.1rem;
+	margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.68rem; 
+}
+
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    color:white;
+	background-color: var(--main-color);
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+    margin-top: -0.68rem;
+	transition: background-color 200ms ease-in-out;
+}
+
+
+
+
+
+#footer-word-count-label {
+    font-family: var(--title-font) !important;
+    color: white;
+    padding: 1px 8px;
+    border-radius: 1.0em;
+    background-color: var(--main-color);
+}
+
+/* bg color when text is selected */
+div::selection {
+background: var(--main-color);
+color: white;
+}
+  
+div::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+div::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+blockquote::selection {
+background: var(--main-color);
+color: white;
+}
+
+blockquote::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+blockquote::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+p::selection {
+background: var(--main-color);
+color: white;
+}
+
+p::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+p::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+label::selection {
+background: var(--main-color);
+color: white;
+}
+
+label::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+label::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+span::selection {
+background: var(--main-color);
+color: white;
+}
+
+span::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+span::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h1::selection {
+background: var(--main-color);
+color: white;
+}
+
+h1::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h1::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h2::selection {
+background: var(--main-color);
+color: white;
+}
+
+h2::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h2::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h3::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h4::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+h5::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+code::selection {
+background: var(--main-color);
+color: white;
+}
+
+code::-moz-selection {
+background: var(--main-color);
+color: white;
+}
+
+code::-webkit-selection {
+background: var(--main-color);
+color: white;
+}
+
+
+/* outside */
+
+
+#megamenu-content {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#megamenu-menu-panel {
+    font-family: var(--title-font);
+    padding: 10px;
+}
+
+.megamenu-menu-panel {
+    padding: 10px;
+}
+
+
+.megamenu-menu-header-title-menu {
+    color: var(--sidebar-font-color);
+}
+
+.megamenu-menu-header-title-back {
+    color: var(--sidebar-font-color);
+}
+
+
+/* sidebar */
+.megamenu-menu-header {
+    width: 60%;
+    text-align:center;
+    border-bottom: solid 3px var(--main-color);
+}
+#megamenu-menu-sidebar {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--sidebar-font-color);
+    box-shadow: 0 0 8px 4px rgb(100 100 100 / 80%);
+    margin-top: 3%;
+    height: 92%;
+    border-radius: 0 4em 4em 0;
+}
+#megamenu-back-btn {
+    border-radius: 1.2em;
+    color: var(--main-color);
+    transition: all linear .3s;
+    padding: 0 0 10px;
+}
+
+#megamenu-back-btn:hover {
+    background-color: var(--main-color);
+    color: white;
+    border: 2px solid white;
+    transition: all linear .3s;
+}
+
+#megamenu-menu-list > li {
+    transition: all linear .3s;
+}
+
+#megamenu-menu-list > li:hover {
+    transition: all linear .3s;
+    border-top-left-radius: 1.2em;
+    border-bottom-left-radius: 1.2em;
+}
+
+#megamenu-menu-list > li:focus {
+    transition: all linear .3s;
+    color : white;
+    background-color: var(--shadow-color);
+    width: fit-content;
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+}
+
+.dropdown-menu .divider {
+    width: 30%;
+    color: var(--main-color);
+    background-color: var(--main-color);
+}
+.megamenu-menu-list li a {
+    transition: all linear .3s;
+    width: fit-content;
+    padding-right: 60px;
+}
+
+.megamenu-menu-list li a:hover {
+    transition: all linear .3s;
+    color: white !important;
+    background-color: var(--main-color) !important;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+.megamenu-menu-list li a.active, .megamenu-menu-list:not(.saved) li a:hover {
+    color: white !important;
+    background-color: var(--main-color) !important;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+
+/* open */
+#m-open-local,
+#m-import-local {
+    border-radius: 1.2em;
+}
+
+#m-open-local:hover,
+#m-import-local:hover {
+    border: 1px solid var(--shadow-color);
+}
+
+#recent-file-panel-search-input {
+    border-radius: 1.2em;
+    transition: all linear .3s;
+    font-family: var(--title-font);
+}
+#recent-file-panel-action-btn {
+    border-radius: 1.2em;  
+}
+
+#recent-file-panel-search-input:hover {
+    transition: all linear .3s;
+    box-shadow: 0 0 10px 3px var(--shadow-color);
+}
+
+#recent-file-panel-search-input:focus {
+    transition: all linear .3s;
+    color: white;
+    border: none;
+    background-color: var(--shadow-color);
+}
+
+/* side bar Ctrl Shift 2 */
+/* .typora-node.pin-outline:not(.megamenu-opened):not(.typora-sourceview-on) #typora-sidebar {
+    display: block;
+    left: 0;
+    transition: left .3s;
+    border-radius: 0em 3em 3em 0em;
+    box-shadow: 0 0 8px 3px rgb(100 100 100 / 80%);
+    margin-top: 20px;
+    margin-bottom: 5%;
+    height: 95%;
+    padding-right: 10px;
+} */
+
+.info-panel-tab-border {
+    color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.outline-content {
+    padding: 3px 18px 3px 0;
+}
+
+.outline-item {
+    margin-left: -20px;
+    margin-right: -20px;
+    border-left: 20px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+.outline-item:hover {
+    background-color: var(--shadow-color);
+    color: white;
+}
+
+.active-tab-files  #info-panel-tab-file .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+.ty-show-search #info-panel-tab-search  .info-panel-tab-title {
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 5px;
+    border-radius: 1.2em;
+    transition: all linear .3s;
+}
+
+
+#file-library-search-input {
+    border-radius: .5em;
+}
+
+#file-library-search-input:focus {
+    border: 2px solid var(--main-color);
+}
+
+.info-panel-tab-border {
+    display: none;
+}
+div#file-library-list-children {
+    transition: all linear .3s;
+}
+
+.file-list-item.active {
+    border-top-right-radius: 2.2em;
+    border-bottom-right-radius: 2.2em;
+    width: fit-content;
+    background-color: var(--main-color) !important;
+    color: white;
+    transition: all linear .3s;
+}
+
+.outline-item-active {
+    border-top-right-radius: 2.2em;
+    border-bottom-right-radius: 2.2em;
+    width: fit-content;
+    background-color: var(--main-color) !important;
+    color: white;
+    transition: all linear .3s;
+}
+
+
+/* theme */
+.theme-preview-div.active, .theme-preview-div.active:hover {
+    border-color: var(--main-color);
+}
+#theme-preview-grid {
+    max-width: 100% !important;
+}
+#open-theme-folder-btn {
+    transition: all .3s;
+    border-radius: 2em;
+    border: none;
+    color: white !important;
+    background-color: var(--main-color);
+}
+#open-theme-folder-btn:hover {
+    transition: all .3s;
+    color: white !important;
+    background-color: var(--shadow-color);
+}
+
+/* export */
+.long-btn {
+    transition: all .3s;
+    border-radius: 2em;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.long-btn:hover {
+    transition: all .3s;
+    color: white !important;
+    background-color: var(--main-color);
+}
+
+.long-btn-wrap {
+    padding: 10px;
+}
+
+.megamenu-section-export {
+    font-family: var(--title-font) !important;
+}
+
+
+.megamenu-menu-panel h1 {
+    padding-bottom: 10px;
+    width: fit-content !important;
+    border-bottom: var(--main-color) solid 3px;
+}
+
+.megamenu-menu-panel h2::before {
+    content: "H2";
+    border-radius: .3em;
+    font-size: 25px;
+    padding: 3px 7px;
+    margin: 5px 15px 5px 1px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/* modal exit dialog */
+.btn-primary {
+    transition: all .3 linear;
+    border-radius: 1.2em;
+    background-color: var(--main-color);
+}
+
+.btn-default {
+    transition: all .3 linear;
+    border-radius: 1.2em;
+    border: var(--main-color) 3px solid;
+    color: var(--main-color);
+    background-color: white;
+}   
+
+.btn-primary:hover,
+.btn-default:hover {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--shadow-color);  
+}
+
+.btn-primary:focus,
+.btn-default:focus {
+    transition: all .3 linear;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.modal-content {
+    border-radius: 1.5em;
+    border: none;
+}
+
+.ImgCaption {
+    padding-top: 0;
+    margin-top: 0;
+    border-bottom: 2px solid var(--shadow-color);
+    width: fit-content;
+  }
+
+/* Perference */
+.nav-group-item-item:hover {
+    transition: all .3s;
+    border: 2px solid var(--main-color);
+}
+.nav-group-item.active {
+    color: white;
+    font-family: var(--title-font);
+    transition: all .3s;
+    border-radius: 1.5em;
+    padding: 6px 11px 6px 11px;
+}
+.nav-group-item {
+    transition: all .3s;
+    border-radius: 1.5em;
+    width: fit-content;
+    cursor: pointer;
+}
+.nav-group-item.active, .nav-group-item:active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+.pane-group {
+    font-family: var(--title-font);
+}
+
+input:not([type=range]):not([type=color]) {
+    outline: none;
+    border: 2px solid var(--main-color);
+    border-radius: .7em;
+    font-size: 16px;
+}
+
+input:not([type=range]):not([type=color]):focus {
+    border-radius: .7em;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: 0 0 6px 3px var(--shadow-color);
+    transition: all .3s linear;
+}
+
+.pane select,
+.pane .btn {
+    border-radius: 0.7em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.pane .btn:hover {
+    color: white !important;
+    transition: all .3s linear;
+    background-color: var(--main-color);
+}
+
+.label-input-group td:hover {
+    box-shadow: none;
+}
+
+.label-input-group .row:hover {
+    color: black;
+    background-color: white;
+}
+
+#write.enable-diagrams>[mermaid-type=gantt].md-fences:not(.md-focus) {
+    width: inherit !important;
+    margin-left: inherit !important;
+}
+
+/* TODO fix the bug below */
+#footer-word-count-info table, #footer-word-count-info td, #footer-word-count-info tr {
+    border: none!important;
+    background: inherit !important;
+    font-size: 13.5px!important;
+    text-align: left!important;
+    padding: 0;
+    -webkit-user-select: initial;
+    user-select: initial;
+    margin: 0!important;
+    line-height: 1.8;
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>Node</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='eventloop'><span>Eventloop</span></h1><h2 id='explain-nodejs-event-loop'><span>Explain Node.js event loop</span></h2><p><span>Explain the Node.js event loop.</span></p><p><strong><span>Answer:</span></strong><span> The event loop is a single-threaded loop that monitors the call stack and checks if there is any work to be done in the task queue. If the stack is empty, it takes the first thing from the queue and puts it on the stack to be executed.</span></p><p><span>Event loop allows JavaScript to handle multiple tasks at the same time, even though it runs on a single thread.</span></p><h1 id='eventemitters'><span>EventEmitters</span></h1><h2 id='what-is-eventemiiters'><span>What is </span><code>EventEmiiters</code><span>?</span></h2><p><span>EventEmitters are used for handling asynchronous events and implementing event-driven architecture. They let different parts of your application talk to each other by emitting and listening for events. </span></p><p><span>Follow-up and similar: </span></p><ol start='' ><li><p><span>Do you know EventEmitters? </span></p></li><li><p><span>Why do you use them? </span></p></li><li><p><span>Are they synchronous or asynchronous?(Event-driven arch, synchronous)</span></p></li></ol><p><strong><span>Answer:</span></strong><span> Yes, I&#39;m familiar with EventEmitters. EventEmitters are used for handling asynchronous events and implementing event-driven architecture. They let different parts of your application talk to each other by emitting and listening for events. </span></p><p><span>EventEmitters work synchronously. This means when an event is emitted, its listeners react immediately, one after the other. However, they can be used alongside asynchronous operations, like waiting for a file to load or a server response, but the EventEmitter&#39;s part in handling these events is always synchronous.</span></p><h2 id='how-to-handle-and-create-custom-events-in-nodejs'><span>How to handle and create custom events in Node.JS?</span></h2><p><strong><span>Answer:</span></strong><span> Handling and creating custom events in Node.js is primarily done using the </span><code>EventEmitter</code><span> class from the </span><code>events</code><span> module. </span></p><h1 id='generator'><span>generator</span></h1><h2 id='what-is-a-generator'><span>What is a generator?</span></h2><p><strong><span>Answer:</span></strong><span> A generator in JavaScript is a special function that allows you to pause and resume its execution, and you can definitely use them in Node.js as well. It&#39;s defined using the function* syntax and uses yield to pause. Generators are useful for lazy iteration, asynchronous programming, and state management.</span></p><ul><li><p><span>What is generator</span></p></li><li><p><span>Start sign</span></p></li><li><p><span>Yield </span></p></li><li><p><span>function.next()</span></p></li></ul><h1 id='http-methods'><span>HTTP methods</span></h1><h2 id='what-are-http-methods-and-what-are-their-constraints'><span>What are HTTP methods and what are their constraints?</span></h2><p><strong><span>Answer:</span></strong><span> </span><code>GET</code><span>, </span><code>POST</code><span>, </span><code>PUT</code><span>, </span><code>DELETE</code><span>, </span><code>PATCH</code><span>.  </span></p><p><span>Constraints:限制条件：</span></p><ul><li><p><strong><span>Safety</span></strong><span>: Safe methods are those that do not modify resources. For example, GET and HEAD are safe methods.安全：安全的方法是那些不修改资源的方法。例如，GET 和 HEAD 是安全的方法。</span></p></li><li><p><strong><span>Idempotency</span></strong><span>: An idempotent method means that multiple identical requests will have the same effect as a single request. PUT, DELETE, and idempotent POST requests fall into this category.幂等性：幂等方法意味着多个相同的请求将具有与单个请求相同的效果。 PUT、DELETE 和幂等 POST 请求都属于这一类。</span></p></li><li><p><strong><span>Cacheability</span></strong><span>: Some HTTP methods can be cached. GET and HEAD responses, for instance, can be stored in cache to improve performance.可缓存性：某些 HTTP 方法可以被缓存。例如，GET 和 HEAD 响应可以存储在缓存中以提高性能。</span></p></li></ul><p>&nbsp;</p><h2 id='what-are-some-http-operations-youve-used'><span>What are some http operations you’ve used?</span></h2><p><strong><span>Answer:</span></strong><span> </span><code>GET</code><span>, </span><code>POST</code><span>, </span><code>PUT</code><span>, </span><code>DELETE</code><span>,</span></p><p><span>In my experience as a front-end developer, I&#39;ve frequently used several HTTP operations to interact with APIs and handle data. Some of the common HTTP methods I&#39;ve used include:</span></p><ol start='' ><li><p><strong><span>GET</span></strong><span>: I often use GET requests to retrieve data from a server. This includes fetching data for display, like user profiles, product lists, or posts. GET is the most common HTTP method in front-end development for reading data.GET：我经常使用 GET 请求从服务器检索数据。这包括获取用于显示的数据，例如用户个人资料、产品列表或帖子。 GET是前端开发中最常用的读取数据的HTTP方法。</span></p></li><li><p><strong><span>POST</span></strong><span>: I use POST requests to send data to a server to create a new resource. This is commonly used for user-generated content, such as creating a new account, posting a comment, or submitting a form.POST：我使用 POST 请求将数据发送到服务器以创建新资源。这通常用于用户生成的内容，例如创建新帐户、发布评论或提交表单。</span></p></li><li><p><strong><span>PUT</span></strong><span>: For updating existing resources, I use PUT requests. This method is ideal for scenarios where the entire resource is being replaced. For example, updating a user&#39;s profile information with new data.PUT：为了更新现有资源，我使用 PUT 请求。该方法非常适合整个资源被替换的场景。例如，使用新数据更新用户的个人资料信息。</span></p></li><li><p><strong><span>PATCH</span></strong><span>: When only a part of a resource needs to be updated, I use PATCH. It’s more efficient than PUT for partial updates, like changing a user&#39;s email address or updating the status of a task.PATCH：当只需要更新资源的一部分时，我使用PATCH。对于部分更新（例如更改用户的电子邮件地址或更新任务的状态），它比 PUT 更有效。</span></p></li><li><p><strong><span>DELETE</span></strong><span>: I use DELETE requests to remove resources from the server. This could be for functionality like deleting a user account, removing a blog post, or clearing a list of items.DELETE：我使用 DELETE 请求从服务器中删除资源。这可能用于删除用户帐户、删除博客文章或清除项目列表等功能。</span></p></li><li><p><strong><span>OPTIONS</span></strong><span>: While less frequent in day-to-day development, I&#39;ve used OPTIONS requests to determine the supported methods of a web server, which is helpful in debugging and API integration.OPTIONS：虽然在日常开发中不太频繁，但我使用 OPTIONS 请求来确定 Web 服务器支持的方法，这对于调试和 API 集成很有帮助。</span></p><p>&nbsp;</p></li></ol><h2 id='explain-the-difference-between-http-and-https'><span>Explain the difference between HTTP and HTTPS.</span></h2><p><strong><span>Answer:</span></strong><span> Both are protocols used for transferring data over the web. </span></p><p><span>The most significant difference between HTTP and HTTPS is security. HTTPS is the secure version of HTTP. It uses SSL/TLS encryption to secure the data transmitted between the client and the server. This encryption ensures that the data cannot be easily intercepted or tampered with by malicious parties. In contrast, HTTP sends this data as plain text, which can be easily read by anyone who manages to intercept the network traffic.</span></p><p><span>HTTP and HTTPS use different ports by default. HTTP uses port 80, whereas HTTPS uses port 443.  HTTP is suitable for browsing where security is not a critical concern. However, for any exchange of sensitive data, like in e-commerce, online banking, or personal data transactions, HTTPS is essential to protect the data integrity and privacy.</span></p><p>&nbsp;</p><h2 id='difference-between-put-and-patch'><span>Difference between put and patch?</span></h2><p><strong><span>Answer:</span></strong><span> The difference between PUT and PATCH methods in HTTP is primarily in how they are used to update resources.  PUT is used when you want to replace an entire resource, while PATCH is more suited for making a set of changes to a part of the resource. </span></p><p><strong><span>Overall Function</span></strong><span>:</span></p><ul><li><p><strong><span>PUT</span></strong><span>: Used to update an entire resource. If the resource does not exist, PUT can also be used to create it.</span></p></li><li><p><strong><span>PATCH</span></strong><span>: Used for partial updates to a resource, meaning only the specified parts of the resource are updated.</span></p></li></ul><p><strong><span>Idempotency</span></strong><span>:</span></p><ul><li><p><strong><span>PUT</span></strong><span>: Idempotent, meaning that making multiple identical PUT requests will have the same effect as making a single request.</span></p></li><li><p><strong><span>PATCH</span></strong><span>: Generally not idempotent. Making multiple identical PATCH requests can have different effects. However, it&#39;s possible to design a PATCH implementation to be idempotent.</span></p></li></ul><p><strong><span>Usage Example</span></strong><span>:</span></p><ul><li><p><strong><span>PUT</span></strong><span>: If you have a user profile with fields like </span><code>name</code><span>, </span><code>email</code><span>, and </span><code>address</code><span>, and you want to update the </span><code>email</code><span> and </span><code>address</code><span>, with PUT, you must send </span><code>name</code><span> (even if it hasn&#39;t changed) along with </span><code>email</code><span> and </span><code>address</code><span>.</span></p></li><li><p><strong><span>PATCH</span></strong><span>: If you only want to update the </span><code>email</code><span>, you can send just the </span><code>email</code><span> field in the request body.</span></p></li></ul><p>&nbsp;</p><h2 id='whats-the-difference-between-put--post-and-when-do-you-choose-one-over-the-other'><span>What’s the difference between put &amp; post, and when do you choose one over the other?</span></h2><p><strong><span>Answer:</span></strong><span> </span></p><ol start='' ><li><p><strong><span>Primary Function</span></strong><span>:</span></p><ul><li><p><strong><span>PUT</span></strong><span>: Primarily used for updating an existing resource or creating a new resource at a specified URL if it does not exist.</span></p></li><li><p><strong><span>POST</span></strong><span>: Used to create a new resource, but without specifying the new resource&#39;s URL. The server determines the new resource&#39;s URL.</span></p></li></ul></li><li><p><strong><span>Idempotency</span></strong><span>:</span></p><ul><li><p><strong><span>PUT</span></strong><span>: Idempotent. Making multiple identical PUT requests has the same effect as making a single request.</span></p></li><li><p><strong><span>POST</span></strong><span>: Not idempotent. Making multiple identical POST requests can result in different outcomes (e.g., creating multiple resources).</span></p></li></ul></li></ol><ul><li><p><strong><span>Choose PUT</span></strong><span> when you want to update a resource and you know its URL. It’s also suitable for creating resources when the client determines the URL.</span></p></li><li><p><strong><span>Choose POST</span></strong><span> for creating new resources when the server should decide the URL. It’s also used for operations that don’t fit into the CRUD (Create, Read, Update, Delete) mold, like complex queries or actions.</span></p></li></ul><p>&nbsp;</p><h2 id='what-do-you-use-to-either-partially-or-completely-update-the-resource'><span>What do you use to either partially or completely update the resource?</span></h2><p><strong><span>Answer:</span></strong><span> </span></p><ul><li><p><span>Use </span><strong><span>PATCH</span></strong><span> for partial updates: If you need to change just a part of a resource, like updating only the email in a user profile.</span></p></li><li><p><span>Use </span><strong><span>PUT</span></strong><span> for complete updates: If you need to update or replace the whole resource, like changing all details in a user profile.</span></p></li></ul><p><span>PATCH is efficient for small changes, while PUT is used for larger or complete changes.</span></p><p>&nbsp;</p><h1 id='nodejs'><span>Node.js</span></h1><h2 id='is-nodejs-single-or-multi-threaded-explain-why-is-nodejs-single-or-multi-threaded-how-does-it-handle-multiple-requests'><span>Is node.js single or multi-threaded? Explain why. Is Nodejs single or multi-threaded? How does it handle multiple requests?</span></h2><p><strong><span>Answer:</span></strong><span> Node.js is single-threaded, which means it uses a single main thread to execute JavaScript code. </span></p><p><span>Although Node.js itself is single-threaded, it uses “event loop” to handle multitasking. It checks whether the stack is empty, if the stack is empty, it will add the first task in the queue to stack. Because of the event loop, node.js can handle many tasks without waiting for one to complete before moving to the next. </span></p><p>&nbsp;</p><h2 id='what-built-in-global-objects-come-to-mind-when-working-with-nodejs-module'><span>What built-in global objects come to mind when working with Node.js? (Module)</span></h2><p><span>Can you name some global objects/variables in Node.js and browser?</span></p><p><span>Answer: </span><code>Module</code><span>. There are some other global objects such as </span><code>global</code><span>, </span><code>process</code><span>, </span><code>console</code><span>, </span><code>Buffer</code><span>, </span><code>__dirname</code><span>, </span><code>__filename</code><span>, </span><code>require</code><span>, </span><code>setImmediate</code><span>, </span><code>clearImmediate</code><span>, </span><code>setTimeout</code><span>, </span><code>clearTimeout</code><span>, </span><code>setInterval</code><span>, </span><code>clearInterval</code></p><ol start='' ><li><p><strong><code>global</code></strong><span>: The top-level namespace object, like </span><code>window</code><span> in browsers. All global variables are properties of this object.</span></p></li><li><p><strong><code>process</code></strong><span>: Provides information about, and control over, the current Node.js process. It includes details like environment information, exit codes, arguments passed to the Node.js process, and more.</span></p></li><li><p><strong><code>console</code></strong><span>: Used for printing to stdout and stderr. It provides functionalities like </span><code>console.log</code><span>, </span><code>console.error</code><span>, and </span><code>console.warn</code><span>.</span></p></li><li><p><strong><code>Buffer</code></strong><span>: Used to handle binary data. In Node.js, raw data is stored in instances of the Buffer class.</span></p></li><li><p><strong><code>__dirname</code></strong><span>: A string that indicates the absolute path of the directory containing the currently executing file.</span></p></li><li><p><strong><code>__filename</code></strong><span>: A string that represents the absolute path of the currently executing file.</span></p></li><li><p><strong><code>module</code></strong><span>: A reference to the current module, and it&#39;s used for exporting a module with </span><code>module.exports</code><span>.</span></p></li><li><p><strong><code>require</code></strong><span>: A function used to import modules, JSON, and local files.</span></p></li><li><p><strong><code>setImmediate</code></strong><span>, </span><strong><code>clearImmediate</code></strong><span>: Methods to schedule/cancel the execution of functions after the current poll phase of the event loop.</span></p></li><li><p><strong><code>setTimeout</code></strong><span>, </span><strong><code>clearTimeout</code></strong><span>, </span><strong><code>setInterval</code></strong><span>, </span><strong><code>clearInterval</code></strong><span>: Timers functions that schedule functions to be executed after a set time interval.</span></p></li></ol><p>&nbsp;</p><h2 id='how-does-nodejs-handle-concurrent-requests'><span>How does node.js handle concurrent requests?</span></h2><p><strong><span>Answer:</span></strong><span> Node.js handles concurrent requests using a non-blocking, event-driven architecture. </span></p><ol start='' ><li><p><strong><span>Single-Threaded Event Loop</span></strong><span>: Node.js uses a single-threaded event loop which manages all asynchronous operations. This loop allows Node.js to handle multiple operations without waiting for any to complete.</span></p></li><li><p><strong><span>Non-Blocking I/O</span></strong><span>: It performs operations like reading files or database queries without blocking the thread. While waiting for the result, Node.js can handle other requests.</span></p></li><li><p><strong><span>Asynchronous Callbacks</span></strong><span>: Once an operation is complete, its callback function is added to a queue and executed when the event loop reaches it.</span></p></li><li><p><strong><span>Efficient Concurrency</span></strong><span>: This model allows Node.js to efficiently handle many requests simultaneously, making it great for I/O-heavy tasks.</span></p></li><li><p><strong><span>Worker Threads for CPU Tasks</span></strong><span>: For CPU-intensive tasks, Node.js can use worker threads to prevent blocking the main event loop.</span></p></li><li><p><strong><span>Clustering for Multi-Core CPUs</span></strong><span>: Node.js can use multiple processor cores by running multiple instances of the event loop using its cluster module.</span></p></li></ol><p>&nbsp;</p><h2 id='why-is-nodejs-powerful-as-it-is'><span>Why is Node.js powerful as it is?</span></h2><p><span>Node.js is considered powerful for several reasons, particularly in the context of building scalable and efficient network applications. </span></p><p><span>In summary, Node.js is powerful due to its non-blocking I/O model, JavaScript&#39;s ubiquity, a vast ecosystem, and strong community support, all of which contribute to its efficiency, performance, and scalability in web application development.</span></p><ol start='' ><li><p><strong><span>Non-Blocking I/O Model</span></strong><span>: Node.js operates on a non-blocking, event-driven architecture, which makes it highly efficient for I/O-intensive tasks. This means it can handle many operations concurrently without waiting for each one to complete, making it ideal for applications that require real-time data processing and high concurrency, like chat applications and online gaming.</span></p></li><li><p><strong><span>Single Programming Language</span></strong><span>: Node.js allows developers to write both client-side and server-side code in JavaScript. This uniformity simplifies development, reduces context switching, and makes it easier to share code between the server and the client.</span></p></li><li><p><strong><span>Vast Ecosystem and NPM</span></strong><span>: Node.js benefits from a vast ecosystem, largely due to npm (Node Package Manager), which provides access to a multitude of libraries and tools. This rich ecosystem makes it easy to extend the functionality of Node.js applications and speeds up development.</span></p></li><li><p><strong><span>Community and Corporate Support</span></strong><span>: Node.js has strong community and corporate support, leading to a steady flow of improvements, updates, and a vast array of resources for learning and troubleshooting.</span></p></li><li><p><strong><span>Performance</span></strong><span>: Thanks to the V8 JavaScript engine (developed by Google), Node.js offers high performance for certain types of applications, especially those requiring fast I/O operations.</span></p></li><li><p><strong><span>Scalability</span></strong><span>: Node.js is designed with scalability in mind. Features like the Cluster module enable load balancing over multiple CPU cores, making it suitable for handling high traffic loads.</span></p></li><li><p><strong><span>Cross-Platform Development</span></strong><span>: Node.js supports cross-platform development, making it possible to build applications that run smoothly on multiple platforms.</span></p></li><li><p><strong><span>Real-Time Capabilities</span></strong><span>: Its event-driven nature makes Node.js a great fit for real-time applications, like instant messaging and live streaming services.</span></p></li><li><p><strong><span>Microservices Compatibility</span></strong><span>: Node.js fits well with the microservices architecture due to its lightweight and modular structure, making it easier to build and maintain scalable systems.</span></p></li></ol><p>&nbsp;</p><h2 id='what-are-some-timing-features-of-nodejs'><span>What are some timing features of Node.js?</span></h2><p><span>Node.js provides several timing features that are useful for scheduling and controlling the execution of code. These features are part of the global namespace, so they can be used directly without requiring any modules.</span></p><p><span>These timing functions are essential for managing asynchronous code execution, creating delays, scheduling repeated tasks, and performance tracking in Node.js applications. They provide developers with fine control over the timing and sequencing of code execution.</span></p><ol start='' ><li><p><strong><code>setTimeout</code></strong><span>: Schedules a function to be executed once after a specified delay (in milliseconds). It returns a timeout object which can be used to cancel the timeout with </span><code>clearTimeout</code><span>.</span></p></li><li><p><strong><code>clearTimeout</code></strong><span>: Used to cancel a timeout scheduled with </span><code>setTimeout</code><span>. It prevents the execution of the callback function if it hasn’t already been executed.</span></p></li><li><p><strong><code>setInterval</code></strong><span>: Schedules a function to be executed repeatedly at specified intervals (in milliseconds). Like </span><code>setTimeout</code><span>, it returns an interval object.</span></p></li><li><p><strong><code>clearInterval</code></strong><span>: Used to stop a timer set with </span><code>setInterval</code><span>. It stops the repeated execution of the associated callback function.</span></p></li><li><p><strong><code>setImmediate</code></strong><span>: Schedules a function to be executed immediately after the current poll phase of the event loop. This is useful for executing scripts after the current operation completes, without waiting for the next tick of the event loop.</span></p></li><li><p><strong><code>clearImmediate</code></strong><span>: Used to cancel an immediate timer set with </span><code>setImmediate</code><span>.</span></p></li><li><p><strong><code>process.nextTick</code></strong><span>: Schedules a callback function to be invoked in the next iteration of the event loop. It effectively allows deferring the execution of a function until after the current operation completes, but before any I/O events or timers are fired.</span></p></li><li><p><strong><code>process.hrtime</code></strong><span>: Used for high-resolution time measurements. It provides time in nanoseconds, making it useful for performance monitoring and benchmarking.</span></p></li></ol><p>&nbsp;</p><h1 id='stream'><span>stream</span></h1><h2 id='do-you-have-experience-working-with-streams-explain-what-they-are'><span>Do you have experience working with streams? Explain what they are.</span></h2><p><strong><span>Answer:</span></strong><span> Yes, I have experience working with streams in Node.js.</span></p><p><span>In short, streams in Node.js are a way to handle data efficiently, chunk by chunk, especially when dealing with large amounts of data or data that&#39;s continuously coming in.</span></p><p><span>Streams are like pipelines that let you read data from a source or write data to a destination in continuous chunks, instead of loading all the data into memory at once. This makes them really efficient for handling large amounts of data. There are four main types:</span></p><ol start='' ><li><p><strong><span>Readable Streams</span></strong><span>: For reading data (like reading a file).</span></p></li><li><p><strong><span>Writable Streams</span></strong><span>: For writing data (like writing to a file).</span></p></li><li><p><strong><span>Duplex Streams</span></strong><span>: Can both read and write data (like a two-way communication channel).</span></p></li><li><p><strong><span>Transform Streams</span></strong><span>: Like Duplex Streams, but can also modify the data as it passes through (like compressing a file while reading it).</span></p></li></ol><p><span>Streams are great for:</span></p><ul><li><p><span>Handling large files without using too much memory.</span></p></li><li><p><span>Processing data that comes in over time, like live video.</span></p></li><li><p><span>Connecting data sources and destinations (like reading a file and then writing it to another file).</span></p></li></ul><p>&nbsp;</p><h2 id='how-do-you-read-streams-in-node-js-what-are-the-different-kinds'><span>How do you read streams in node js? What are the different kinds?</span></h2><p><span>Certainly! Reading streams in Node.js involves handling data in chunks as it comes in, without loading everything at once. Here&#39;s a simplified explanation:</span></p><ol start='' ><li><p><strong><span>Creating a Readable Stream</span></strong><span>: You create a stream from a data source like a file. For example, reading a file stream:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 13px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">fs</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">'fs'</span>);</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">stream</span> <span class="cm-operator">=</span> <span class="cm-variable">fs</span>.<span class="cm-property">createReadStream</span>(<span class="cm-string">'file.txt'</span>);</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 60px;"></div><div class="CodeMirror-gutters" style="display: none; height: 60px;"></div></div></div></pre></li><li><p><strong><span>Listening to Stream Events</span></strong><span>: You handle data by listening to events on the stream:</span></p><ul><li><p><code>&#39;data&#39;</code><span>: Triggered when there&#39;s new data to read.</span></p></li><li><p><code>&#39;end&#39;</code><span>: Triggered when there&#39;s no more data.</span></p></li><li><p><code>&#39;error&#39;</code><span>: Triggered if an error occurs.</span></p></li></ul><p><span>Example:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="javascript"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="javascript"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 13px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">stream</span>.<span class="cm-property">on</span>(<span class="cm-string">'data'</span>, (<span class="cm-def">chunk</span>) <span class="cm-operator">=&gt;</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">chunk</span>); <span class="cm-comment">// chunk is a piece of data from the file</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">});</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 90px;"></div><div class="CodeMirror-gutters" style="display: none; height: 90px;"></div></div></div></pre></li><li><p><strong><span>Modes</span></strong><span>: Streams can be in two modes:</span></p><ul><li><p><strong><span>Flowing Mode</span></strong><span>: Automatically reads data as soon as it&#39;s available.</span></p></li><li><p><strong><span>Paused Mode</span></strong><span>: You manually control when to read data.</span></p></li></ul></li><li><p><strong><span>Different Kinds of Readable Streams</span></strong></p><ul><li><p><strong><span>File Streams</span></strong><span>: Read data from files.</span></p></li><li><p><strong><span>HTTP Requests</span></strong><span>: In a web server, requests are streams.</span></p></li><li><p><strong><span>Standard Input</span></strong><span>: Reading user input from the terminal.</span></p></li></ul></li></ol><p><span>In short, reading streams in Node.js is about processing data in parts as it arrives, which is great for handling large amounts of data or data that comes over time, like user input or file content.</span></p><p>&nbsp;</p><h2 id='have-you-used-spawn-and-fork-methods-before'><span>Have you used spawn and fork methods before?</span></h2><p><span>Answer: Yes, I have experience with using both </span><code>spawn</code><span> and </span><code>fork</code><span> methods in Node.js, which are part of the </span><code>child_process</code><span> module. These methods are used to create new processes.</span></p><p><span>Sure, let&#39;s simplify that:</span></p><p><span>In Node.js, </span><code>spawn</code><span> and </span><code>fork</code><span> are two methods used to create new processes:</span></p><ol start='' ><li><p><strong><code>spawn</code><span> Method</span></strong><span>: </span></p><ul><li><p><strong><span>Use</span></strong><span>: It&#39;s used to start a new process, like running a command line tool. It&#39;s good for tasks that continuously output data.</span></p></li><li><p><strong><span>Example</span></strong><span>: If you need to run a command like </span><code>ls</code><span> in your Node.js app, you&#39;d use </span><code>spawn</code><span>.</span></p></li><li><p><strong><span>Data Handling</span></strong><span>: It handles data as streams, which is great for processing large amounts of data.</span></p></li></ul></li><li><p><strong><code>fork</code><span> Method</span></strong><span>:</span></p><ul><li><p><strong><span>Use</span></strong><span>: It&#39;s specifically for running new Node.js processes. It&#39;s like </span><code>spawn</code><span> but is used to create child Node.js processes.</span></p></li><li><p><strong><span>Communication</span></strong><span>: It allows the parent and child Node.js processes to communicate with each other.</span></p></li><li><p><strong><span>Example</span></strong><span>: If you have a heavy task in Node.js and you don&#39;t want it to block your main process, you can use </span><code>fork</code><span> to handle it separately.</span></p></li></ul></li></ol><p><span>In short, use </span><code>spawn</code><span> when you need to run a command or script that produces or handles lots of data, and use </span><code>fork</code><span> when you want to run a separate Node.js module in a new process, especially if you need to communicate between the processes.</span></p><p>&nbsp;</p><h2 id='lets-say-you-have-a-file-that-is-heavy-10gb-but-you-need-to-send-it-how-do-you-handle-this-in-terms-of-performance-blocking-vs-non-blocking-code'><span>Let’s say you have a file that is heavy (10GB), but you need to send it. How do you handle this in terms of performance (blocking vs. non-blocking code)?</span></h2><p><strong><span>Answer:</span></strong><span> The most efficient way to handle large files in Node.js is by using streams. Streams allow you to read and write files in chunks, preventing the need to load the entire file into memory at once. First, create a readable stream to read the file in parts. Second, read and send the file in chunks. If you&#39;re sending the file over a network, you can directly send these chunks as they&#39;re read, without waiting for the entire file to be loaded. This method is efficient because it uses less memory and doesn&#39;t block other operations in your Node.js application. Make sure to handle any errors, like if the file doesn&#39;t exist.</span></p><h1 id='restful-api'><span>RESTful API</span></h1><h2 id='do-you-have-experience-with-restful-apis-are-you-familiar-with-restful-services-how-do-you-implement-them'><span>Do you have experience with RESTful APIs? Are you familiar with RESTful services? How do you implement them?</span></h2><p><span>Answer: Yes, I&#39;ve worked with RESTful APIs quite a bit. I&#39;ve mostly used Node.js along with the Express framework to build them. The reason I like Express is that it has a lot of built-in methods to handle HTTP requests and is very extensible. Initially, I&#39;d define what the API needs to accomplish and what kind of data it will be working with. Once that&#39;s clear, I&#39;ll set up the basic project structure.</span></p><p><span>After that, I start defining the routes for the various resources the API will expose. For storing data, I often use databases like MongoDB or PostgreSQL, depending on the project needs. I&#39;d use appropriate npm packages to interact with these databases, like Mongoose for MongoDB or Sequelize for SQL databases. </span></p><p><span>I&#39;ve used JWT (JSON Web Tokens) for authentication. This allows the server to ensure that the user making a request is who they say they are. For authorization, I&#39;d implement middleware to check user roles and permissions.</span></p><p><span>Error handling is crucial. You want to make sure that you return meaningful status codes and messages so the client knows what went wrong if something fails. Also, input validation is important to protect against malformed data or potential security risks.&quot;</span></p><p>&nbsp;</p><h2 id='what-restful-services-would-you-use-to-save-and-retrieve-data'><span>What RESTful services would you use to save and retrieve data?</span></h2><p><span>Answer: I&#39;d primarily use the HTTP methods POST and GET for saving and retrieving data, respectively. </span></p><p><span>When you want to save new data, like adding a new user profile or uploading a file, you&#39;d generally use a POST request. This sends the data from the client to the server, where it can be processed and stored.</span></p><p><span>To retrieve data, you&#39;d use a GET request. For example, if you want to get a list of all articles, you might make a GET request to an endpoint like /api/articles. To get a specific article, the endpoint might look like /api/articles/:id, where :id is the unique identifier for the article you&#39;re interested in.</span></p><h3 id='saving-data'><span>Saving Data</span></h3><ul><li><p><strong><span>POST Method</span></strong><span>: Used to create a new resource.</span></p></li><li><p><strong><span>Endpoint Example</span></strong><span>: </span><code>/items</code><span> (assuming you&#39;re saving &#39;items&#39;).</span></p></li><li><p><strong><span>Request Body</span></strong><span>: Include the data you want to save in the request body, typically as JSON.</span></p></li><li><p><strong><span>Operation</span></strong><span>: The server processes the request body and creates a new item in the database.</span></p></li><li><p><strong><span>Response</span></strong><span>: The server responds with a success status (like 201 Created) and often includes the created resource or its ID.</span></p></li></ul><h3 id='retrieving-data'><span>Retrieving Data</span></h3><ul><li><p><strong><span>GET Method</span></strong><span>: Used to retrieve a resource or a list of resources.</span></p></li><li><p><strong><span>Endpoint Examples</span></strong><span>:</span></p><ul><li><p><code>/items</code><span> to retrieve all items.</span></p></li><li><p><code>/items/{id}</code><span> to retrieve a specific item by its ID.</span></p></li></ul></li><li><p><strong><span>Operation</span></strong><span>: The server fetches the item(s) from the database and returns them.</span></p></li><li><p><strong><span>Response</span></strong><span>: The server sends the requested data back, usually in JSON format.</span></p></li></ul><h3 id='additional-considerations'><span>Additional Considerations</span></h3><ul><li><p><strong><span>Authentication and Authorization</span></strong><span>: If the data is sensitive or user-specific, your API should include authentication (verifying who is making the request) and authorization (verifying what they are allowed to do).</span></p></li><li><p><strong><span>Validation</span></strong><span>: Validate data both when saving (to ensure data integrity) and retrieving (to ensure requests are well-formed).</span></p></li><li><p><strong><span>Error Handling</span></strong><span>: Provide clear error messages and appropriate HTTP status codes for scenarios like resource not found (404), bad request (400), or server errors (500).</span></p></li></ul><p>&nbsp;</p><h2 id='how-did-you-use-node-js-to-implement-a-restful-api'><span>How did you use Node JS to implement a restful API?</span></h2><p><span>Answer:  I&#39;ve actually worked on a couple of projects where we used Node.js along with Express to build RESTful APIs. Express is really useful because it gives you a lot of built-in functionality for handling HTTP requests and responses.</span></p><p><span>First off, I started by setting up a new Node.js project and installing the Express package. Then, I set up various routes corresponding to the CRUD operations: Create, Read, Update, and Delete. </span></p><p><span>For data storage, I&#39;ve used MongoDB in some projects and SQL databases in others. With Node.js, you can easily connect to these databases using various libraries, like Mongoose for MongoDB or Sequelize for SQL databases. </span></p><p><span>I&#39;ve used JWT (JSON Web Tokens) for authentication. It&#39;s pretty straightforward to implement using packages like jsonwebtoken. </span></p><p><span>For input validation, I&#39;ve used libraries like joi that allow you to define validation schemas for your API endpoints. </span></p><p><span>For error handling, Express has middleware that you can use to catch and handle errors in a centralized manner. I&#39;ve also worked on adding features like pagination, sorting, and filtering. These can usually be implemented directly in the database queries, and they really improve the API&#39;s usability.</span></p><p>&nbsp;</p><h2 id='what-kinds-of-endpoints-should-i-use-to-insertcreate-data-what-about-to-update-data'><span>What kinds of endpoints should I use to insert/create data? What about to update data?</span></h2><p><span>Answer: When you&#39;re looking to insert or create new data, a POST request is typically the way to go. You would target an endpoint that represents a collection of resources, like /api/users for instance.For updates, you have a couple of options. You could use a PUT request if you&#39;re replacing the entire record, or a PATCH request if you&#39;re updating just specific fields. The endpoint would include the unique ID of the resource you&#39;re updating. So, it would look something like /api/users/123.</span></p><p><span>In summary:</span></p><ul><li><p><span>Use </span><code>POST /resource</code><span> to create new resources.</span></p></li><li><p><span>Use </span><code>PUT /resource/{id}</code><span> for full updates and </span><code>PATCH /resource/{id}</code><span> for partial updates of existing resources.</span></p></li></ul><p>&nbsp;</p><h2 id='how-do-we-maintain-a-synchronous-connection-between-client-and-server'><span>How do we maintain a synchronous connection between client and server?</span></h2><p><span>Answer: Generally, HTTP is stateless and request-response oriented, but there are techniques to make the connection feel more synchronous or real-time.</span></p><p><span>Well, one common way is WebSockets. WebSockets allow for two-way communication between the client and server, making it possible to exchange data in real-time. Once the initial connection is established, WebSockets keep that connection open for as long as the client or server wants. This allows data to be sent back and forth without having to re-establish the connection every time.</span></p><p><span>Another option could be Server-Sent Events (SSE). They are a bit simpler than WebSockets and allow the server to send data to the client whenever new information is available. However, it&#39;s mostly one-way from the server to the client.</span></p><p><span>AJAX polling is another technique where the client repeatedly sends requests to the server to check for new data. It&#39;s not as efficient as WebSockets or SSE, but it&#39;s simpler to implement.</span></p><p><span>If real-time interaction is crucial, WebSockets would probably be the best choice because of the two-way communication. But if you just need to update the client with new information occasionally, SSE or even AJAX polling could suffice.</span></p><p><span>Maintaining a synchronous connection between a client and server, where both can communicate in real-time, typically involves techniques beyond the standard request-response model of HTTP. Here are a few common methods:</span></p><h3 id='1-websockets'><span>1. WebSockets</span></h3><ul><li><p><strong><span>How It Works</span></strong><span>: WebSockets provide a full-duplex communication channel that operates over a single, long-lived connection. Once established, either the client or server can send messages at any time, enabling real-time communication.</span></p></li><li><p><strong><span>Use Cases</span></strong><span>: Chat applications, real-time notifications, live data feeds, gaming, and collaborative editing tools.</span></p></li></ul><h3 id='2-server-sent-events-sse'><span>2. Server-Sent Events (SSE)</span></h3><ul><li><p><strong><span>How It Works</span></strong><span>: SSE enables servers to push data to the client. Unlike WebSockets, SSE is unidirectional; the server sends data to the client, but the client cannot send data back to the server over the same connection.</span></p></li><li><p><strong><span>Use Cases</span></strong><span>: Real-time updates where the client doesn’t need to send messages back to the server, like live news feeds or stock price updates.</span></p></li></ul><h3 id='3-long-polling'><span>3. Long Polling</span></h3><ul><li><p><strong><span>How It Works</span></strong><span>: The client sends a request to the server, and the server holds the request open until new data is available. Once the client receives the new data, it immediately sends another request, and the process repeats.</span></p></li><li><p><strong><span>Use Cases</span></strong><span>: Useful as a fallback method when WebSockets are not available, but less efficient and more resource-intensive.</span></p></li></ul><h3 id='4-http2-server-push'><span>4. HTTP/2 Server Push</span></h3><ul><li><p><strong><span>How It Works</span></strong><span>: In HTTP/2, the server can send multiple responses for a single client request. This can be used to push updates to the client.</span></p></li><li><p><strong><span>Use Cases</span></strong><span>: Efficient loading of web page resources; less common for real-time communication.</span></p></li></ul><h3 id='considerations'><span>Considerations</span></h3><ul><li><p><strong><span>Latency and Bandwidth</span></strong><span>: Real-time communication can be resource-intensive. It&#39;s important to consider the latency and bandwidth implications, especially for applications with many users.</span></p></li><li><p><strong><span>Fallback Strategies</span></strong><span>: Not all clients or networks support WebSockets or SSE. Having fallbacks like long polling can ensure broader compatibility.</span></p></li><li><p><strong><span>Security</span></strong><span>: As with any client-server communication, security measures like encryption (using TLS/SSL) and authentication are crucial, especially when transmitting sensitive data.</span></p></li></ul><p><span>In summary, for maintaining a synchronous or real-time connection between a client and a server, WebSockets are often the preferred choice, with SSE and long polling as alternatives depending on the specific needs and constraints of the application.</span></p><h1 id='jwt'><span>JWT</span></h1><h2 id='what-is-jwt-could-you-explain-what-jwt-is-and-how-its-used-in-web-development'><span>What is JWT? Could you explain what JWT is and how it&#39;s used in web development?</span></h2><p><span>Answer: Certainly! JWT, or JSON Web Token, is a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.</span></p><p><span>One of the most common use cases for JWTs is in authentication and authorization processes. For instance, when a user logs into a web application, the server creates a JWT that encodes the user&#39;s identity and possibly some other details, then sends it back to the client. The client can then use this token to access protected resources by sending it in the HTTP Authorization header with each request.</span></p><p><span>JWT, or JSON Web Token, is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed and, optionally, encrypted. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA or ECDSA.</span></p><h3 id='components-of-a-jwt'><span>Components of a JWT</span></h3><p><span>A JWT typically consists of three parts:</span></p><ol start='' ><li><p><strong><span>Header</span></strong><span>: The header typically consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.</span></p></li><li><p><strong><span>Payload</span></strong><span>: The payload contains the claims. Claims are statements about an entity (typically, the user) and additional data. There are three types of claims: registered, public, and private claims.</span></p></li><li><p><strong><span>Signature</span></strong><span>: To create the signature part, you have to take the encoded header, the encoded payload, a secret, the algorithm specified in the header, and sign that.</span></p></li></ol><h3 id='format'><span>Format</span></h3><p><span>The three parts are encoded separately using Base64URL and concatenated using periods to form a single compact token: </span><code>xxxxx.yyyyy.zzzzz</code><span>.</span></p><h3 id='uses-of-jwt'><span>Uses of JWT</span></h3><p><span>JWTs are used primarily for authentication and information exchange. After a user logs in, the server creates a JWT for that user and sends it back to the client. The client will then typically store this JWT and include it in the header of future requests to the server. This way, the server can verify the user&#39;s identity and grant access to protected resources.</span></p><h3 id='advantages'><span>Advantages</span></h3><ul><li><p><strong><span>Compactness</span></strong><span>: JWTs can be sent through a URL, POST parameter, or inside an HTTP header, and they are much more compact than other methods like SAML.</span></p></li><li><p><strong><span>Self-contained</span></strong><span>: The payload contains all the required information about the user, avoiding the need to query the database more than once.</span></p></li></ul><h3 id='security-considerations'><span>Security Considerations</span></h3><ul><li><p><strong><span>Sensitive Information</span></strong><span>: Because the payload is only encoded and not encrypted, do not store sensitive information in a JWT.</span></p></li><li><p><strong><span>Token Expiration</span></strong><span>: Implement token expiration to mitigate the risk of tokens being stolen and misused.</span></p></li><li><p><strong><span>HTTPS</span></strong><span>: Always use JWTs in conjunction with HTTPS to prevent man-in-the-middle attacks.</span></p></li></ul><p><span>In summary, JWTs are a popular method for securely transmitting information between parties in a web application, especially for authentication and authorization processes.</span></p><p>&nbsp;</p><h2 id='how-does-jwt-differ-from-other-authentication-mechanisms'><span>How does JWT differ from other authentication mechanisms?</span></h2><p><span>Answer: JWT stands out for its statelessness and scalability. Unlike traditional session-based authentication, which requires storing user sessions on the server, JWTs are stored on the client side. This means the server doesn’t have to maintain session state, making JWT a good choice for scalable applications, particularly in microservices architectures where handling sessions can be complex.</span></p><p>&nbsp;</p><h2 id='what-about-security-concerns-with-jwt'><span>What about security concerns with JWT?</span></h2><p><span>Answer: While JWTs are secure, they must be handled correctly. They should always be transmitted over secure channels, like HTTPS. Also, the choice of the signing algorithm is important. Symmetric algorithms like HMAC are simpler but require keeping the secret secure, while asymmetric ones like RSA allow for a public key to be openly shared for verifying tokens. Additionally, token expiration mechanisms need to be properly implemented to prevent misuse of the tokens.</span></p><h1 id='authetication-vs-authorization'><span>Authetication vs Authorization</span></h1><h2 id='what-is-authetication-and-authorization'><span>What is authetication and authorization?</span></h2><p><span>Answer: Authentication is the process of verifying who a user is, while authorization is the process of verifying what specific applications, files, and data a user has access to.</span></p><p><span>Authentication involves validating the identity of a user. This is typically done through credentials like usernames and passwords, biometric data, or one-time pins. The main point of authentication is to ensure that the individual trying to access the system is who they claim to be.</span></p><p><span>Once a user is authenticated, the next step is authorization, which determines the user&#39;s access rights. It&#39;s like answering the question, &#39;What can this authenticated user do?&#39; For example, in a company, while all employees may be authenticated to use the company&#39;s intranet, only certain individuals might be authorized to access financial records or personnel files. Authorization is usually handled through settings managed by an administrator.</span></p><h1 id='status-code'><span>status code</span></h1><h2 id='what-is-the-400-response-code'><span>What is the 400 response code?</span></h2><p><span>Answer: The HTTP 400 Bad Request response status code indicates that the server cannot or will not process the request due to something that is perceived as a client error. This can occur for several reasons, including but not limited to:</span></p><ol start='' ><li><p><strong><span>Invalid Request Format</span></strong><span>: The request could not be understood by the server due to incorrect syntax. For example, malformed JSON or XML in the request body.</span></p></li><li><p><strong><span>Invalid Request Data</span></strong><span>: The request has valid syntax, but the data is not meaningful or correct. For example, missing required fields or parameters, data types mismatch, or field values that don&#39;t conform to the expected format.</span></p></li><li><p><strong><span>Invalid Headers</span></strong><span>: The request headers are incorrect or inconsistent. For instance, if the Content-Type header specifies one type but the body is in a different format.</span></p></li><li><p><strong><span>Routing Errors</span></strong><span>: Sometimes, a 400 error can occur if the request is routed to a server endpoint that does not exist or can&#39;t handle the request method.</span></p></li></ol><p><span>The 400 status code is generally used as a catch-all response for cases where no more specific message is suitable. When a server returns this error, it&#39;s a signal to the client that it should modify the request before resending it. It&#39;s also considered good practice for the server to include a message in the response body explaining the reason for the error, helping the client to understand why the request was rejected.</span></p><h1 id='package-npm'><span>package, npm</span></h1><h2 id='any-favorite-npm-libraries'><span>Any favorite npm libraries?</span></h2><p><span>Answer: Express, Axios</span></p><p><span>Express simplifies a lot of complex tasks like routing, middleware, and handling requests and responses. It&#39;s highly customizable, so you can build both small and large scale applications with it.</span></p><p><span>And for frontend work, I often use Axios for making HTTP requests. It&#39;s super straightforward and works well with async/await.</span></p><p>&nbsp;</p><h2 id='when-you-run-npm-install-where-are-the-installed-packages-stored'><span>When you run npm install, where are the installed packages stored?</span></h2><p><span>Answer: node_modules</span></p><p>&nbsp;</p><h2 id='what-file-does-npm-look-for-when-running-npm-install'><span>What file does npm look for when running npm install?</span></h2><p><span>Answer: package.json</span></p><p>&nbsp;</p><h2 id='youve-used-npm-tell-me-how-you-manage-projects-in-different-environments-with-different-node-versions'><span>You’ve used npm. Tell me how you manage projects in different environments with different node versions.</span></h2><p><span>Answer: I often use nvm—that&#39;s Node Version Manager. It allows me to easily switch between different versions of Node depending on the project requirements.</span></p><p>&nbsp;</p><h2 id='do-you-use-npmyarn-which-one-in-the-same-project-whats-the-reason-for-using-different-ones-different-dependencies'><span>Do you use npm/yarn? Which one? In the same project? What’s the reason for using different ones? (Different dependencies)</span></h2><p><span>Answer: I&#39;ve actually used both npm and yarn, depending on the project and the team&#39;s preferences.</span></p><ul><li><p><span>What makes you choose one over the other?</span></p></li></ul><p><span>npm is more widely used and has been around longer, so it has broader community support. Yarn, on the other hand, has some performance improvements and features like workspaces that can be quite useful.</span></p><ul><li><p><span>Would you ever use both in the same project?</span></p></li></ul><p><span> I wouldn&#39;t recommend that. Mixing package managers can lead to inconsistencies in the dependency versions and could cause issues. It&#39;s best to stick to one for each project to keep things straightforward.</span></p><ul><li><p><span>Any specific reason you would prefer yarn for a project? And for npm?</span></p></li></ul><p><span>Yarn&#39;s workspaces feature is pretty handy for monorepo setups. Also, it&#39;s generally faster and has a more user-friendly interface. So for certain projects, especially large ones, yarn might be the better choice.</span></p><p><span>Npm is pretty much the industry standard, and it&#39;s the default for Node.js. So if you&#39;re working on a project where you want the widest compatibility and community support, npm is usually a safe bet.</span></p><p>&nbsp;</p><h2 id='how-do-you-manage-packages-in-nodejs'><span>How do you manage packages in node.js?</span></h2><p><span>Answer: I primarily use npm, the Node Package Manager.</span></p><p><span>You usually start by initializing a new project with npm init. This sets up a package.json file where all the dependencies for your project are listed. You can install a package using npm install </span><package-name><span>. This will download the package and its dependencies, and it&#39;ll add an entry to the package.json file and the package-lock.json file. For the versions, You can specify the version you want when installing a package or update the version number directly in the package.json file. Running npm update will then fetch the latest versions based on what you&#39;ve specified.</span></p><ul><li><p><span>Do you have any experience with other package managers?</span></p></li></ul><p><span>Yes, I&#39;ve also used Yarn a bit. It&#39;s very similar to npm but offers some additional features and is often faster. However, npm is more widely used and has broader community support, so I generally stick with it.</span></p><ul><li><p><span>how do you handle packages that you only need for development</span></p></li></ul><p><span>You can install packages as devDependencies by using npm install </span><package-name><span> --save-dev. These packages won&#39;t be included when you&#39;re deploying your app, which can keep things lean.</span></p><p>&nbsp;</p><h2 id='whats-the-purpose-of-yarnlock-and-packagejson-files-what-other-benefits'><span>What’s the purpose of yarn.lock and package.json files? What other benefits?</span></h2><p><span>Answer: </span></p><ul><li><p><span>package.json serves as a manifest for your project. It keeps track of the packages your project depends on, their versions, and even some scripts you can run. It&#39;s like a roadmap of what your project needs to work.</span></p></li><li><p><span>yarn.lock is specific to projects that use Yarn as a package manager. It&#39;s automatically generated and ensures that the exact same versions of dependencies are used whenever you or someone else installs them.</span></p></li><li><p><span>The package.json file can do more than just manage dependencies. You can define custom scripts for tasks like building, testing, and deploying your project. It can also specify configuration information and even license details. having a yarn.lock file can really improve the reliability of a project. Because it locks down versions, you&#39;re less likely to run into issues where something works on one machine but not another. It helps maintain a consistent environment across different setups.</span></p></li></ul><h1 id='library'><span>Library</span></h1><h2 id='library-for-making-third-party-calls-axios'><span>Library for making third-party calls? (Axios)</span></h2><p><span>Answer: </span></p><p><span>I&#39;ve used Axios quite a bit. It&#39;s promise-based, so it works well with async/await. It&#39;s also super flexible—you can set default headers, intercept requests and responses, and it even has built-in support for canceling requests.</span></p><p><span>I&#39;ve also used the native fetch API and Node&#39;s http module for simpler use-cases. But when I need something more feature-rich, Axios is my first choice.</span></p><ul><li><p><span>Are there any challenges you&#39;ve faced when making third-party calls?</span></p></li></ul><p><span>Handling timeouts and retries can be tricky. Also, you have to be cautious with error handling, especially when dealing with third-party services that might not always send back clear error messages.</span></p><ul><li><p><span>How do you usually deal with those challenges?</span></p></li></ul><p><span>Axios has some built-in features that help, like the ability to automatically retry a request. For more complex scenarios, I might wrap my API calls in a try-catch block to handle errors more gracefully.</span></p><p>&nbsp;</p><h2 id='library-for-input-validation-deserialize-data-by-converting-to-json-use-validators'><span>Library for input validation? (Deserialize data by converting to json, use validators)</span></h2><p><span>Answer:</span></p><p>&nbsp;</p><h2 id='if-we-have-different-library-versions-how-can-we-maintain-the-same-version-when-working-on-the-project'><span>If we have different library versions, how can we maintain the same version when working on the project?</span></h2><p><span>Answer: One common approach is to use a package manager like npm and include a package-lock.json or yarn.lock file in your project repository. you can also specify exact versions in your package.json file instead of using ranges. This way, running npm install will always install the specified version. However, this approach means you need to manually update versions, unlike the flexibility you get with lock files.</span></p><ul><li><p><span>What if some team members are still having issues?</span></p></li></ul><p><span>In that case, it&#39;s often helpful to include a &#39;Getting Started&#39; guide or README with the project. This can outline the steps for setting up the project environment, including which version of the package manager to use, any global dependencies, and so on.</span></p><h1 id='secure'><span>secure</span></h1><h2 id='how-do-you-handle-security-have-you-used-a-passport'><span>How do you handle security? Have you used a passport?</span></h2><p><span>Answer: Yes, I&#39;ve used Passport before, and it&#39;s a really helpful tool for handling authentication.</span></p><p><span>It supports different authentication strategies like OAuth, JWT, and even local username and password authentication. Plus, it&#39;s easy to integrate with Express.js, which I often use for building web applications.</span></p><h2 id='how-do-you-ensure-that-incoming-requests-are-secure'><span>How do you ensure that incoming requests are secure?</span></h2><p><span>Answer: There are several layers to consider for securing incoming requests. </span></p><ul><li><p><span>First off, I usually make sure to use HTTPS instead of HTTP, which encrypts the data in transit. </span></p></li><li><p><span>I often implement authentication mechanisms like JWT (JSON Web Tokens) to verify the identity of the user making the request. This ensures that only authorized users have access to specific endpoints. </span></p></li><li><p><span>Sensitive data, like passwords, should never be stored in plain text. I usually hash them using libraries like bcrypt before storing them in the database. </span></p></li><li><p><span>Input validation is crucial to prevent SQL injection and other malicious activities. </span></p></li><li><p><span>Also, I implement rate limiting to protect against brute-force attacks. </span></p></li><li><p><span>CORS (Cross-Origin Resource Sharing) policies are also useful to restrict which domains can access your API. </span></p></li><li><p><span>Using API keys is another way to secure your endpoints. They act like a password, giving you another layer to confirm that the requests are coming from a trusted source.</span></p></li></ul><p>&nbsp;</p><h1 id='situation-questions'><span>Situation Questions</span></h1><h2 id='say-you-type-wwwgooglecom-in-the-search-url-what-happens-before-your-client-browser-receives-the-page'><span>Say you type </span><a href='http://www.google.com'><span>www.google.com</span></a><span> in the search url, what happens before your client browser receives the page?</span></h2><p><strong><span>Answer:</span></strong><span>  First, when you type</span><a href='http://www.google.com/'><span> www.google.com</span></a><span> and hit Enter, your browser needs to figure out the IP address of the server that hosts Google&#39;s website. This is done through a DNS lookup. DNS, or Domain Name System, translates the human-friendly domain name into an IP address that machines can understand. Once the browser knows the IP address, it sends an HTTP request to Google&#39;s server. If you&#39;re using HTTPS, there&#39;ll be a handshake process to establish a secure connection. After that, the server processes the request and sends back the relevant HTML, CSS, and JavaScript files. Your browser receives these files and starts rendering the Google homepage. It reads the HTML for the structure, applies the CSS for styling, and executes any JavaScript to make the page interactive. And voila! You see the Google homepage on your screen.</span></p><p>&nbsp;</p><h2 id='imagine-you-have-an-hr-application-where-you-display-a-list-of-all-employees-in-the-system'><span>Imagine you have an HR application where you display a list of all employees in the system. </span></h2><ul><li><p><span>How would you design an API for this application to get all the employees? </span></p></li></ul><p><span>I&#39;d first consider what data I need to display for each employee, like their name, job title, department, and so on. Then I&#39;d create an API endpoint to fetch this data.</span></p><ul><li><p><span>What would the UI and methods look like?</span></p></li></ul><p><span>On the UI side, I&#39;d probably use a table to display the employees&#39; information in rows. Each column would represent a different attribute like name, department, or job title. I might also include a search bar and some filters to make it easier for users to find specific employees.</span></p><ul><li><p><span>What HTTP method would you use?</span></p></li></ul><p><span>For fetching data, the HTTP GET method is the standard choice. It&#39;s designed to retrieve information without causing any side-effects.</span></p><ul><li><p><span>Based on the REST conventions, what would the url look like? Like localhost:3000:/</span></p></li></ul><p><span>I&#39;d go for a URL like GET </span><a href='http://localhost:3000/employees' target='_blank' class='url'>http://localhost:3000/employees</a><span>. This is a clear and RESTful way to signify that we&#39;re fetching all employees. If someone wants to filter or sort the list, query parameters can be added to the URL.</span></p><p>&nbsp;</p><h2 id='lets-say-you-have-a-file-that-is-heavy-10gb-but-you-need-to-send-it'><span>Let’s say you have a file that is heavy (10GB), but you need to send it. </span></h2><p><span>How do you handle this in terms of performance (blocking vs. non-blocking code)?</span></p><p><span>Answer: I&#39;d opt for a streaming approach. Using streams, I&#39;d read small chunks of the file and send them over the network piece by piece. This is a non-blocking approach, meaning the server can handle other tasks while the file is being sent. I&#39;d use the built-in fs module for file handling and perhaps the http or https module to handle the networking part. You could set up a readable stream for the file and pipe it to a writable stream for the client&#39;s response. You&#39;d need to consider error handling; for example, what happens if the connection is lost during transfer? Also, if the client is slow to read the data, you might want to implement some backpressure management to avoid overloading things.</span></p><h1 id='database-mongodb'><span>database MongoDB</span></h1><h2 id='when-you-use-mongoose-and-connect-to-mongodb-if-you-send-userid-to-get-data-what-type-is-returned-what-type-of-object'><span>When you use mongoose, and connect to MongoDB, if you send userId to get data, what type is returned? What type of object?</span></h2><p><span>Answer:  When I query MongoDB using Mongoose by userId, the data returned is typically a Mongoose Document object. it&#39;s not a plain JavaScript object. A Mongoose Document is a bit special because it has additional methods and properties attached to it. Like, you can call .save() or .delete() directly on that document.</span></p><p><span>Follow up: </span></p><ul><li><p><span>How do you convert it into a plain object or JSON?</span></p></li></ul><p><span>You can use the .toObject() method to convert it to a plain JavaScript object, or .toJSON() to get a JSON representation. Both methods strip out all the extra Mongoose magic, giving you the bare data.</span></p><ul><li><p><span>Do you usually work with Mongoose Documents directly or convert them?</span></p></li></ul><p><span>It really depends on what I need to do. If I need to modify the data and save it back to the database, working with the Mongoose Document is convenient. But if I just need to send the data to the client, I often convert it to JSON.</span></p><p>&nbsp;</p><h2 id='whenever-youre-connected-to-mongoose-and-you-query-what-is-the-return-type'><span>Whenever you’re connected to mongoose, and you query, what is the return type?</span></h2><p><span>Answer: When I run a query using Mongoose, the return type is usually a Mongoose Document. This is not just a plain JavaScript object. </span></p><p>&nbsp;</p><h1 id='others'><span>Others</span></h1><h2 id='can-you-describe-what-mvc-is'><span>Can you describe what MVC is?</span></h2><p><span>Answer: That stands for Model-View-Controller. It&#39;s a design pattern often used in software engineering to separate an application into three main components. First up, you have the Model, it handles the data and the business rules. Think of it as your back-end logic. The View is all about presentation. It&#39;s what the user interacts with. The Controller is like the manager that handles the communication between the Model and the View. When you click a button on the webpage, the Controller decides what should happen in the Model and what should change in the View.</span></p><p><span>Follow-up:</span></p><ul><li><p><span>How do these components interact?</span></p></li></ul><p><span>The user interacts with the View, which sends the user&#39;s actions to the Controller. The Controller then updates the Model if necessary, and the Model sends any updated data back to the View via the Controller. It&#39;s a nice cycle that keeps everything organized.</span></p><ul><li><p><span>Why is MVC beneficial?</span></p></li></ul><p><span> it really helps to keep your code clean and organized. By separating concerns, it&#39;s easier to manage complexity and make updates. You can work on one part of an application without having to touch the others, making it more maintainable and scalable.</span></p><p>&nbsp;</p><h2 id='how-did-you-test-the-performance-of-sql-queries-with-node'><span>How did you test the performance of SQL queries with Node?</span></h2><ul><li><p><span>Morgan/API logger</span></p></li><li><p><span>console.log</span></p></li></ul><p>&nbsp;</p><h2 id='what-is-middleware'><span>What is middleware?</span></h2><p><span>Answer: middleware is basically code that sits between the request and the response cycle. It has access to the req (request), res (response), and the next function. Middleware can do all sorts of things like logging, authentication, or even modifying the request and response objects.</span></p><p><span>Follow up:</span></p><ul><li><p><span>Do you have access to the req object inside the middleware?</span></p></li></ul><p><span>Absolutely. The req object is fully available in the middleware, so you can read from it, like grabbing headers or parameters, and you can also modify it. For instance, you could add new properties to it, which could be useful for passing data along to subsequent middleware or route handlers.</span></p><ul><li><p><span>Could you give me an example of when you&#39;d modify the req object?</span></p></li></ul><p><span>Certainly. Let&#39;s say you have an authentication middleware. It can decode a token from the Authorization header in the req object, validate it, and then attach the decoded user data to req.user. That way, the routes that come after the middleware can have easy access to the authenticated user&#39;s data.</span></p><p>&nbsp;</p><h2 id='how-many-threads-are-running'><span>How many threads are running?</span></h2><p>&nbsp;</p><h2 id='how-can-i-store-different-properties-for-each-environment'><span>How can I store different properties for each environment?</span></h2><p><span>完整问题：When you&#39;re working on a project, how do you manage different properties for each environment like development, testing, and production?</span></p><p><span>Answer: One common way I&#39;ve handled this is by using environment variables. They&#39;re great for storing sensitive or environment-specific information.&quot;</span></p><p><span>Follow up:</span></p><ul><li><p><span>So do you use any package to manage these variables?</span></p></li></ul><p><span>Yes, I usually use a package like dotenv to load variables from a .env file. That way, I can keep sensitive data out of the codebase.</span></p><ul><li><p><span>And how do you differentiate between environments?</span></p></li></ul><p><span>I typically have multiple .env files, like .env.development and .env.production. Then, I can specify which file to use by setting the NODE_ENV variable. Depending on the environment, the appropriate .env file gets loaded.</span></p><ul><li><p><span>Do you do this manually, or is there an automated way to switch between different .env files?</span></p></li></ul><p><span>I generally automate it. For example, in my package.json file, I can set up different scripts for running the app in development or production, each setting NODE_ENV accordingly. That way, I can be sure the right settings are used without having to manually switch files.</span></p><p>&nbsp;</p><h2 id='how-do-i-define-private-variables-and-methods'><span>How do I define private variables and methods?</span></h2><p><span>Answer: In the past, we&#39;d use closures to encapsulate private variables. But nowadays, ES6 classes offer more options. In ES6 classes, you can use the # symbol to define a private field. For example, #myPrivateVar would be a private variable, accessible only within the class itself. You can do the same for methods. Just prefix the method name with #, like #myPrivateMethod(), and it becomes private to the class. Another approach is to define variables within the constructor function but not attach them to this. These variables will be accessible only within the constructor and methods defined within it. That&#39;s a way to achieve privacy without using ES6 features.</span></p><p><span>Follow up:</span></p><ul><li><p><span>what if you&#39;re working with objects, but not using classes?</span></p></li></ul><p><span>In that case, you can use closures to encapsulate private variables. You create a function that returns an object, and any variables defined inside that function can&#39;t be accessed from outside, effectively making them private.</span></p><h2 id='how-do-i-reduce-js-file-size'><span>How do I reduce JS file size?</span></h2><p><span>Answer: One common method is minification. Tools like UglifyJS or Terser can remove unnecessary whitespace, comments, and even rename variables to shorter versions to reduce file size. Another technique is tree-shaking. If you&#39;re using a module bundler like Webpack, tree-shaking can eliminate dead code from the final bundle, ensuring that only the code that&#39;s actually used gets shipped. code-splitting is another powerful way to reduce initial load times. Instead of loading a single large JavaScript file, you can split it into smaller chunks and load them only when needed. you could also look into using compression methods like Gzip or Brotli. These can significantly reduce the file size during transfer over the network.</span></p><p>&nbsp;</p></div></div>
+</body>
+</html>
